@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Домашна 1 - Контролен панел за паметен дом</title>
+</head>
+<body>
+
+<header>
+    <h1>Контролен панел за паметен дом</h1>
+    <p>Добредојдовте! Системот ги следи сите сензори во сиите 4 простории во вашиот дом.</p>
+    <nav>
+        <ul>
+            <li><a href="#dnevna">Дневна соба</a></li>
+            <li><a href="#spalna">Спална соба</a></li>
+            <li><a href="#kujna">Кујна</a></li>
+            <li><a href="#gradina">Градина</a></li>
+            <li><a href="#izvestuvanja">Известувања</a></li>
+        </ul>
+    </nav>
+</header>
+
+<br>
+
+<!-- ДНЕВНА СОБА -->
+<section id="dnevna">
+    <h2>Дневна соба</h2>
+
+    <article>
+        <p><strong>Сензор за температура</strong></p>
+        <p>Измерено: <strong>25 &deg;C</strong> (Дозволен опсег: 20 &deg;C - 25 &deg;C)</p>
+        <p>Статус: <mark>Вклучен</mark> | Батерија: <meter value="20" min="0" max="100"></meter> 20%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Ако температурата излезе од опсегот 20 &lt; temp &lt; 25, прилагоди го греењето.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за бучава</strong></p>
+        <p>Интензитет: <input type="range" value="30" min="0" max="100" disabled> (Тивко)</p>
+        <p>Статус: <mark>Вклучен</mark> | Батерија: <meter value="85" min="0" max="100"></meter> 85%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Испрати известување на телефон ако се појави бучава по полноќ.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за прозорец</strong></p>
+        <p>Отворен прозорец: <input type="checkbox" checked disabled></p>
+        <p>Статус: <mark>Вклучен</mark> | Батерија: <meter value="60" min="0" max="100"></meter> 60%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Автоматски исклучи ја климата доколку сензорот детектира отворен прозорец.</p>
+        </details>
+    </article>
+</section>
+
+<!-- СПАЛНА СОБА -->
+<section id="spalna">
+    <h2>Спална соба</h2>
+
+    <article>
+        <p><strong>Сензор за квалитет на воздух</strong></p>
+        <p>Статус: <mark>Вклучен</mark> | Индикатор: <input type="color" value="#ff0000" disabled></p>
+        <p>Ниво на батерија: <meter value="100" min="0" max="100"></meter> 100%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Ако индикаторот свети црвено, филтерот е полн и треба да се исчисти.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за време (Аларм)</strong></p>
+        <p>Поставено за: <input type="time" value="07:30"> | Статус: <mark>Вклучен</mark></p>
+        <p>Ниво на батерија: <meter value="50" min="0" max="100"></meter> 50%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Алармот е активен само од понеделник до петок.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за амбиентално светло</strong></p>
+        <p>Јачина: <input type="range" value="10" disabled> | Статус: <mark>Исклучен</mark></p>
+        <p>Ниво на батерија: <meter value="75" min="0" max="100"></meter> 75%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Постепено намалувај го светлото по полноќ.</p>
+        </details>
+    </article>
+</section>
+
+<hr>
+<<!-- КУЈНА --> 
+<section id="kujna">
+    <h2>Кујна</h2>
+
+    <article>
+        <p><strong>Сензор за детекција на чад</strong></p>
+        <p>Ниво: <input type="range" value="5" min="0" max="100" disabled> | Статус: <mark>Вклучен</mark> (БЕЗБЕДНО)</p>
+        <p>Ниво на батерија: <meter value="100" min="0" max="100"></meter> 100%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Веднаш активирај звучен аларм ако нивото надмине 40%.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за отворање врата на фрижидер</strong></p>
+        <p>Температура: <input type="number" value="4" readonly> &deg;C | Child Lock: <input type="checkbox" checked disabled></p>
+        <p>Статус: <mark>Вклучен</mark> | Ниво на батерија: <meter value="90" min="0" max="100"></meter> 90%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Алармирај ако вратата е отворена подолго од 2 минути.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за протекување вода </strong></p>
+        <p>Детектирано протекување: Нема</p>
+        <p>Статус: <mark>Вклучен</mark> | Ниво на батерија: <meter value="70" min="0" max="100"></meter> 70%</p>
+        <details>
+            <summary>Безбедност</summary>
+            <p>Затвори го главниот вентил ако сензорот детектира протекување.</p>
+        </details>
+    </article>
+</section>
+
+<hr>
+
+<!-- ГРАДИНА -->
+<section id="gradina">
+    <h2>Градина</h2>
+
+    <article>
+        <p><strong>Сензор за влажност на почва</strong></p>
+        <p>Влажност: <input type="range" value="15" min="0" max="100" disabled> 15%</p>
+        <p>Статус: <mark>Вклучен</mark> | Ниво на батерија: <meter value="30" min="0" max="100"></meter> 30%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Активирај наводнување ако влажноста падне под 20%.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за надворешно светло</strong></p>
+        <p>Детекција на мрак: <input type="checkbox" checked disabled> | Тајмер: <input type="time" value="20:00"></p>
+        <p>Статус: <mark>Вклучен</mark> | Ниво на батерија: <meter value="100" min="0" max="100"></meter> 100%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Вклучи ги рефлекторите само кога е детектиран мрак по 20:00 часот.</p>
+        </details>
+    </article>
+
+    <article>
+        <p><strong>Сензор за ниво на вода во базен</strong></p>
+        <p>Ниво: <input type="range" value="90" disabled> 90%</p>
+        <p>Статус: <mark>Вклучен</mark> | Ниво на батерија: <meter value="65" min="0" max="100"></meter> 65%</p>
+        <details>
+            <summary>Правило</summary>
+            <p>Дополни вода ако нивото падне под 70%.</p>
+        </details>
+    </article>
+</section>
+
+<hr>
+
+<section id="izvestuvanja">
+     <h2>Известувања</h2>
+    <details>
+        <summary>Прикажи ги активните известувања (5)</summary>
+        <ul>
+            <li>Дневна соба: Греењето е прилагодено бидејќи температурата ја достигна горната граница од 25 степени.</li>
+            <li>Дневна соба: Клима уредот е исклучен бидејќи сензорот детектираше отворен прозорец.</li>
+            <li>Спална соба: Потребно е чистење на филтерот за воздух. Индикаторот свети црвено.</li>
+            <li>Градина: Системот за наводнување е пуштен. Измерена е влажност на почвата од само 15%.</li>
+            <li>ВАЖНО ИЗВЕСТУВАЊЕ: Батеријата на сензорот за температура е ниска (20%). Потребна е замена наскоро.</li>
+        </ul>
+    </details>
+</section>
+
+</body>
+</html>
